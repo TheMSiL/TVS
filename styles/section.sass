@@ -1,0 +1,59 @@
+@import vars
+
+.content_container
+	max-width: 85%
+	margin: 0 auto
+
+	img
+		width: 50%
+		border-radius: 1rem
+		box-shadow: 2px 2px 10px black
+
+.section
+	display: flex
+	justify-content: space-between
+	position: relative
+	padding: 5rem 0
+	margin-bottom: 3rem
+
+	&_span
+		position: absolute
+		color: $white_text
+		font-size: 15rem
+		font-weight: 700
+		line-height: 15rem
+		top: 2.5rem
+		opacity: 0.1
+
+	&_content
+		max-width: 38rem
+
+		&-subtitle
+			display: flex
+			align-items: center
+			color: $orange_text
+			font-size: 1.25rem
+			font-weight: 700
+			letter-spacing: 0.375rem
+			text-transform: uppercase
+			gap: 2rem
+
+			&::before
+				display: inline-block
+				content: ''
+				width: 4.5rem
+				height: 0.125rem
+				background-color: $orange_text
+
+		&-title
+			font-size: 3rem
+			margin: 2rem 0
+
+		&-text
+			font-size: 1.25rem
+			line-height: 1.5
+			text-align: justify
+
+.inventory, .storage, .repair
+	span
+		right: 0

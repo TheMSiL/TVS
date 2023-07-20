@@ -1,0 +1,77 @@
+@import vars
+
+.footer
+	display: flex
+	align-items: flex-end
+	padding-bottom: 3rem
+
+	&_info
+		display: grid
+		max-width: 30rem
+		gap: 1rem
+
+		&-title
+			font-size: 1.5rem
+			line-height: 1.5
+
+		&-materials
+			display: flex
+			justify-content: space-between
+
+			img
+				width: 100%
+
+			p
+				max-width: 10rem
+				border: 1px solid $orange_text
+
+	&_about
+		display: flex
+		align-items: flex-start
+		gap: 4rem
+		margin-left: auto
+
+		&-contacts
+			max-width: 20rem
+			&--title
+				font-size: 1.5rem
+				color: $orange_text
+				margin-bottom: 2rem
+
+			&--items
+				display: grid
+				gap: 1rem
+				font-weight: 700
+				line-height: 1.3
+
+				&-li
+					display: flex
+					align-items: flex-start
+					svg
+						width: 20px
+						height: 20px
+						transition: $ease500
+						margin-right: 8px
+
+						&:hover
+							transform: scale(1.5)
+
+		&-more
+			max-width: 20rem
+
+			&--title
+				font-size: 1.5rem
+				color: $orange_text
+				margin-bottom: 2rem
+
+			&--nav
+				&_ul
+					display: grid
+					gap: 1rem
+					font-weight: 700
+					line-height: 1.3
+
+					&-li
+						transition: 300ms ease
+						&:hover
+							color: $orange_text

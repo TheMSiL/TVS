@@ -1,0 +1,45 @@
+@import header
+@import vars
+
+.main
+	position: relative
+	height: 100vh
+	&::after
+		position: absolute
+		width: 100%
+		height: 100vh
+		content: ''
+		background-image: url('../img/main_bg.jpg')
+		opacity: 0.3
+		object-fit: cover
+		top: 0
+		left: 0
+		z-index: -1
+
+.main_content
+	max-width: 39rem
+	margin: 0 auto
+
+	&-title
+		color: $orange_text
+		font-size: 4.5rem
+		margin: 4rem auto
+		text-shadow: 2px 2px black
+		text-align: center
+
+	&-subtitle
+		display: flex
+		align-items: center
+		gap: 2rem
+		font-size: 2.25rem
+
+		&::before
+			display: inline-block
+			content: ''
+			width: 4.5rem
+			height: 0.125rem
+			background-color: $orange_text
+
+	&-text
+		font-size: 1.25rem
+
