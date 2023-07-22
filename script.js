@@ -17,7 +17,7 @@ const scrollToSection = () => {
 			targetSection.getBoundingClientRect().top +
 			window.scrollY -
 			headerHeight +
-			150;
+			160;
 
 		window.scrollTo({
 			top: targetPosition,
@@ -72,3 +72,25 @@ const scrollToSection = () => {
 };
 
 scrollToSection();
+
+// burger menu //
+
+const burgerMenu = () => {
+	const burger = document.querySelector('.burger');
+	const overlay = document.querySelector('.overlay');
+
+	burger.addEventListener('click', () => {
+		burger.classList.toggle('active');
+		overlay.style.display = 'flex';
+
+		if (!burger.classList.contains('active')) {
+			overlay.style.transform = 'translateY(-100%)';
+		} else {
+			setTimeout(() => {
+				overlay.style.transform = 'translateY(0)';
+			}, 0);
+		}
+	});
+};
+
+burgerMenu();

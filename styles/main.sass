@@ -5,13 +5,25 @@
 	position: relative
 	height: 100vh
 	&::after
+		pointer-events: none
+		content: ''
+		position: absolute
+		bottom: -110px
+		left: 0%
+		width: 100%
+		height: 100px
+		transform: translate(0px, -100%)
+		background: linear-gradient(180deg, rgba(11, 28, 38, 0) 20%, #001f3f 100%)
+
+	&::before
 		position: absolute
 		width: 100%
 		height: 100vh
 		content: ''
-		background-image: url('../img/main_bg.jpg')
-		opacity: 0.3
-		object-fit: cover
+		background-image: url('../img/main_bg.jpeg')
+		background-size: cover
+		background-repeat: no-repeat
+		opacity: 0.5
 		top: 0
 		left: 0
 		z-index: -1
@@ -42,4 +54,3 @@
 
 	&-text
 		font-size: 1.25rem
-
