@@ -1,0 +1,78 @@
+@import vars
+
+@keyframes slideLeft
+	0%
+		transform: translate(-100%)
+	100%
+		transform: translate(0)
+
+@keyframes slideRight
+	0%
+		transform: translate(100%)
+	100%
+		transform: translate(0)
+
+.persons
+	display: block
+	padding: 2rem 0 5rem
+	margin-bottom: 0
+
+	&_slider
+		overflow: hidden
+		position: relative
+
+		&-item
+			display: none
+			justify-content: space-evenly
+			align-items: center
+			margin-bottom: 3rem
+
+			img
+				width: 30%
+				max-height: 650px
+
+			&--text
+
+				&-title
+					font-size: 3rem
+					display: flex
+					align-items: center
+					gap: 2rem
+					margin-bottom: 2rem
+
+					&::before
+						display: inline-block
+						content: ''
+						width: 3.5rem
+						height: 0.125rem
+						background-color: $orange_text
+
+				&-subtitle
+					font-size: 1.25rem
+					color: $orange_text
+					font-weight: 700
+
+		&-btns
+			text-align: center
+
+			button
+				background: transparent
+				border: none
+				cursor: pointer
+
+				img
+					border-radius: 0
+					box-shadow: none
+					transition: $ease500
+
+					&:hover
+						transform: scale(1.2)
+
+.slideL
+	animation: slideLeft 1250ms ease-out
+
+.slideR
+	animation: slideRight 1250ms ease-out
+
+.active-items
+	display: flex

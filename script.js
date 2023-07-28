@@ -94,3 +94,50 @@ const burgerMenu = () => {
 };
 
 burgerMenu();
+
+// slider persons //
+
+const items = document.querySelectorAll('.persons_slider-item');
+let currentIndex = 0;
+
+function showSlide(index, direction) {
+	items.forEach((item, i) => {
+		item.classList.remove('slideR');
+		item.classList.remove('slideL');
+		if (i === index) {
+			if (direction === 'right') {
+				item.classList.add('slideR');
+			} else if (direction === 'left') {
+				item.classList.add('slideL');
+			}
+			item.classList.add('active-items');
+		} else {
+			item.classList.remove('active-items');
+		}
+	});
+}
+
+function nextSlide() {
+	currentIndex++;
+	if (currentIndex >= items.length) {
+		currentIndex = 0;
+	}
+	showSlide(currentIndex, 'right');
+}
+
+function prevSlide() {
+	currentIndex--;
+	if (currentIndex < 0) {
+		currentIndex = items.length - 1;
+	}
+	showSlide(currentIndex, 'left');
+}
+
+const prevBtn = document.querySelector('.prevBtn');
+const nextBtn = document.querySelector('.nextBtn');
+if (nextBtn) {
+	prevBtn.addEventListener('click', prevSlide);
+	nextBtn.addEventListener('click', nextSlide);
+}
+
+showSlide(currentIndex);

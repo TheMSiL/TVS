@@ -105,9 +105,13 @@
 	.footer_about-more
 		display: none
 
+	.persons_slider-item
+		img
+			width: 45%
+
 @media (max-width: 810px)
 
-	.main_content
+	.main_content, .team_content
 		max-width: 30rem
 
 		&-title
@@ -127,6 +131,16 @@
 	.section_content-title
 		font-size: 1.75rem
 
+	.team_content-subtitle
+		gap: 1rem
+		font-size: 1.75rem
+
+		&::before
+			width: 3rem
+
+	.persons_slider-item--text-subtitle
+		font-size: 1rem
+
 @media (max-width: 650px)
 	.logo
 		img
@@ -145,7 +159,7 @@
 	.header
 		margin-bottom: 7rem
 
-	.main_content
+	.main_content, .team_content
 		max-width: 22rem
 
 		&-title
@@ -182,12 +196,26 @@
 			&-title
 				font-size: 1rem
 
-			&-materials
-				img
-					width: 75%
-
 	.overlay_list-item
 		font-size: 1rem
+
+	.persons_slider-btns
+		display: flex
+		max-width: 8rem
+		margin: 0 auto
+
+	.team-title
+		font-size: 1.75rem
+
+	.persons_slider-item--text-title
+		font-size: 1.5rem
+		gap: 1rem
+
+		&::before
+			width: 2rem
+
+	.persons_slider-item--text-subtitle
+		font-size: 0.8rem
 
 @media (max-width: 480px)
 
@@ -195,6 +223,10 @@
 		.line
 			width: 25px
 			height: 2px
+
+	.active
+		.line:nth-child(1)
+			transform: rotate(-45deg) translate(-3px, 4px)
 
 	.header
 		margin-bottom: 3rem
@@ -227,8 +259,15 @@
 	.footer_about-contacts--items
 		font-size: 0.8rem
 
+	.persons_slider-btns
+		max-width: 5rem
+
+	#map
+		iframe
+			height: 250px
+
 @media (max-width: 380px)
-	.main_content
+	.main_content, .team_content
 		&-subtitle
 			font-size: 1rem
 		&-title
