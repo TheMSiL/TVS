@@ -86,7 +86,7 @@
 			width: 95%
 			margin: 0 auto
 
-	.inventory, .storage, .repair, .original, .certificate
+	.inventory, .storage, .repair, .original, .certificate, .banco-second
 		flex-direction: column-reverse
 
 	.section_imgBox
@@ -118,9 +118,18 @@
 		img
 			width: 45%
 
+	.banco_content
+		max-width: 40rem
+
+		&-subtitle
+			font-size: 2rem
+
+		&-title
+			font-size: 4rem
+
 @media (max-width: 810px)
 
-	.main_content, .team_content, .fabrica_content
+	.main_content, .team_content, .fabrica_content, .banco_content
 		max-width: 30rem
 
 		&-title
@@ -133,6 +142,9 @@
 
 			&::before
 				width: 3rem
+
+	.banco_content
+		max-width: 32rem
 
 	.section_imgBox
 		img
@@ -194,7 +206,7 @@
 		&-text
 			font-size: 1rem
 
-	.fabrica_content
+	.fabrica_content, .banco_content
 		max-width: 24rem
 		&-title
 			font-size: 3rem
@@ -259,7 +271,7 @@
 		margin-bottom: 1rem
 @media (max-width: 480px)
 
-	.fabrica_content
+	.fabrica_content,	.banco_content
 		max-width: 19rem
 		&-title
 			font-size: 2.25rem
@@ -335,7 +347,7 @@
 		&-text
 			font-size: 0.8rem
 
-	.fabrica_content
+	.fabrica_content,	.banco_content
 		&-title
 			font-size: 2.25rem
 			margin: 2.5rem auto
