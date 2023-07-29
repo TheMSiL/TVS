@@ -86,9 +86,18 @@
 			width: 95%
 			margin: 0 auto
 
-	.inventory, .storage, .repair
+	.inventory, .storage, .repair, .original, .certificate
 		flex-direction: column-reverse
 
+	.section_imgBox
+		margin: 0 auto
+
+		img
+			height: 350px
+
+	#player iframe
+		height: 420px
+		width: 100%
 	.footer
 		width: 95%
 		margin: 0 auto
@@ -111,7 +120,7 @@
 
 @media (max-width: 810px)
 
-	.main_content, .team_content
+	.main_content, .team_content, .fabrica_content
 		max-width: 30rem
 
 		&-title
@@ -124,6 +133,10 @@
 
 			&::before
 				width: 3rem
+
+	.section_imgBox
+		img
+			height: 300px
 
 	.section
 		padding: 5rem 0 2rem
@@ -141,6 +154,11 @@
 	.persons_slider-item--text-subtitle
 		font-size: 1rem
 
+	#player
+		text-align: center
+	#player iframe
+		height: 320px
+		width: 90%
 @media (max-width: 650px)
 	.logo
 		img
@@ -162,6 +180,22 @@
 	.main_content, .team_content
 		max-width: 22rem
 
+		&-title
+			font-size: 3rem
+			margin: 2.5rem auto
+
+		&-subtitle
+			gap: 1rem
+			font-size: 1.25rem
+
+			&::before
+				width: 2rem
+
+		&-text
+			font-size: 1rem
+
+	.fabrica_content
+		max-width: 24rem
 		&-title
 			font-size: 3rem
 			margin: 2.5rem auto
@@ -217,7 +251,26 @@
 	.persons_slider-item--text-subtitle
 		font-size: 0.8rem
 
+	.section_imgBox
+		img
+			height: 220px
+
+	.mb
+		margin-bottom: 1rem
 @media (max-width: 480px)
+
+	.fabrica_content
+		max-width: 19rem
+		&-title
+			font-size: 2.25rem
+			margin: 2.5rem auto
+
+	.section_imgBox
+		img
+			height: 150px
+
+	#player iframe
+		height: 220px
 
 	.burger
 		.line
@@ -266,8 +319,14 @@
 		iframe
 			height: 250px
 
+	.section_imgBox
+		gap: 1rem
+		img
+			height: 180px
+
 @media (max-width: 380px)
-	.main_content, .team_content
+
+	.main_content, .team_content, .fabrica_content
 		&-subtitle
 			font-size: 1rem
 		&-title
@@ -275,6 +334,11 @@
 			margin: 2rem auto
 		&-text
 			font-size: 0.8rem
+
+	.fabrica_content
+		&-title
+			font-size: 2.25rem
+			margin: 2.5rem auto
 
 	.slider_items
 		font-size: 0.7rem

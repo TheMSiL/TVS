@@ -1,7 +1,8 @@
+@import fabricaAbout
 @import header
 @import vars
 
-.main
+.fabrica
 	position: relative
 	height: 100vh
 	&::after
@@ -20,16 +21,17 @@
 		width: 100%
 		height: 100vh
 		content: ''
-		background-image: url('../img/main-page/main_bg.jpeg')
+		background-image: url('../img/fabrica/fabrica_bg.jfif')
 		background-size: cover
 		background-repeat: no-repeat
+		background-position: center
 		opacity: 0.5
 		top: 0
 		left: 0
 		z-index: -1
 
-.main_content
-	max-width: 39rem
+.fabrica_content
+	max-width: 35rem
 	margin: 0 auto
 
 	&-title
@@ -56,3 +58,7 @@
 		font-size: 1.25rem
 		line-height: 1.25
 
+#player iframe
+	border-radius: 1rem
+	width: 40vw
+	height: 100%
