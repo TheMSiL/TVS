@@ -95,13 +95,12 @@ const burgerMenu = () => {
 
 burgerMenu();
 
-// slider persons //
+// Slider for persons
+const personsItems = document.querySelectorAll('.persons_slider-item');
+let currentIndexPersons = 0;
 
-const items = document.querySelectorAll('.persons_slider-item');
-let currentIndex = 0;
-
-function showSlide(index, direction) {
-	items.forEach((item, i) => {
+function showPersonsSlide(index, direction) {
+	personsItems.forEach((item, i) => {
 		item.classList.remove('slideR');
 		item.classList.remove('slideL');
 		if (i === index) {
@@ -117,27 +116,83 @@ function showSlide(index, direction) {
 	});
 }
 
-function nextSlide() {
-	currentIndex++;
-	if (currentIndex >= items.length) {
-		currentIndex = 0;
+function nextPersonsSlide(arr) {
+	currentIndexPersons++;
+	if (currentIndexPersons >= arr.length) {
+		currentIndexPersons = 0;
 	}
-	showSlide(currentIndex, 'right');
+	showPersonsSlide(currentIndexPersons, 'right');
 }
 
-function prevSlide() {
-	currentIndex--;
-	if (currentIndex < 0) {
-		currentIndex = items.length - 1;
+function prevPersonsSlide(arr) {
+	currentIndexPersons--;
+	if (currentIndexPersons < 0) {
+		currentIndexPersons = arr.length - 1;
 	}
-	showSlide(currentIndex, 'left');
+	showPersonsSlide(currentIndexPersons, 'left');
 }
 
-const prevBtn = document.querySelector('.prevBtn');
-const nextBtn = document.querySelector('.nextBtn');
-if (nextBtn) {
-	prevBtn.addEventListener('click', prevSlide);
-	nextBtn.addEventListener('click', nextSlide);
+const prevPersonsBtn = document.querySelector('.prevBtn');
+const nextPersonsBtn = document.querySelector('.nextBtn');
+if (nextPersonsBtn) {
+	prevPersonsBtn.addEventListener('click', () => {
+		prevPersonsSlide(personsItems);
+	});
+	nextPersonsBtn.addEventListener('click', () => {
+		nextPersonsSlide(personsItems);
+	});
 }
 
-showSlide(currentIndex);
+showPersonsSlide(currentIndexPersons);
+
+// // Switch category
+// const categories = document.querySelectorAll('.category_item');
+// let currentIndexCategories = 0;
+
+// function showCategory(index, direction) {
+// 	categories.forEach((item, i) => {
+// 		item.classList.remove('flipL');
+// 		item.classList.remove('flipR');
+// 		if (i === index) {
+// 			if (direction === 'right') {
+// 				item.classList.add('flipR');
+// 			} else if (direction === 'left') {
+// 				item.classList.add('flipL');
+// 			}
+// 			item.classList.add('activeCategory');
+// 		} else {
+// 			item.classList.remove('activeCategory');
+// 		}
+// 	});
+// }
+
+
+// function nextSlide(arr) {
+// 	currentIndexCategories++;
+// 	if (currentIndexCategories >= arr.length) {
+// 		currentIndexCategories = 0;
+// 	}
+// 	showCategory(currentIndexCategories, 'right');
+// }
+
+// function prevSlide(arr) {
+// 	currentIndexCategories--;
+// 	if (currentIndexCategories < 0) {
+// 		currentIndexCategories = arr.length - 1;
+// 	}
+// 	showCategory(currentIndexCategories, 'left');
+// }
+
+// const prevCategoryBtn = document.querySelector('.prevCategory');
+// const nextCategoryBtn = document.querySelector('.nextCategory');
+
+// if (prevCategoryBtn) {
+// 	prevCategoryBtn.addEventListener('click', () => {
+// 		prevSlide(categories);
+// 	});
+// 	nextCategoryBtn.addEventListener('click', () => {
+// 		nextSlide(categories);
+// 	});
+// }
+
+// showCategory(currentIndexCategories);

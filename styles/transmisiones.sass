@@ -1,8 +1,7 @@
-@import fabricaAbout
 @import header
 @import vars
 
-.fabrica
+.transmisiones
 	position: relative
 	height: 100vh
 	&::after
@@ -21,7 +20,7 @@
 		width: 100%
 		height: 100vh
 		content: ''
-		background-image: url('../img/fabrica/fabrica_bg.jfif')
+		background-image: url('../img/transmisiones/transimisones_bg.jpg')
 		background-size: cover
 		background-repeat: no-repeat
 		background-position: center
@@ -30,8 +29,8 @@
 		left: 0
 		z-index: -1
 
-.fabrica_content
-	max-width: 40rem
+.transmisiones_content
+	max-width: 50rem
 	margin: 0 auto
 
 	&-title
@@ -40,6 +39,7 @@
 		margin: 4rem auto
 		text-shadow: 2px 2px black
 		text-align: center
+		text-transform: uppercase
 
 	&-subtitle
 		display: flex
@@ -57,8 +57,3 @@
 	&-text
 		font-size: 1.25rem
 		line-height: 1.25
-
-#player iframe
-	border-radius: 1rem
-	width: 40vw
-	height: 100%
